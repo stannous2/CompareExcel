@@ -39,24 +39,3 @@ let friends = [{
 ]
 
 module.exports = friends;
-
-// console.log ('friends.lenth', friends.length)
-
-// function findMatch() {
-//     //set up an array for variables
-//     let diffTotal = [];
-//     let newFriendIndex = friends.length - 1;
-//     console.log('new friend index ' + newFriendIndex)
-//     for (i = 0; i < friends.length - 1; i++) {
-//         let scoreDiff = 0;
-//         for (j = 0; j < friends[i].scores.length; j++) {
-//             scoreDiff += Math.abs(friends[i].scores[j] - friends[newFriendIndex].scores[j]);
-//         }
-
-//         diffTotal.push(parseInt(scoreDiff));
-//     }
-//     console.log("least difference", Math.min(...diffTotal))
-//     let index = diffTotal.indexOf(Math.min(...diffTotal))
-//     console.log('closest matched: ' + JSON.stringify(friends[index]))
-//     return friends[index]
-// }

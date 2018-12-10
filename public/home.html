@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>FriendFinder</title>
+  <title>ASF Tool</title>
 
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -21,17 +21,35 @@
   <div class="container">
 
     <div class="jumbotron">
-      <h1><i class="fa fa-facebook-square" aria-hidden="true"></i> Friend Finder</h1>
+      <h2>Aircraft Arrestment File Validation Tool</h2>
       <hr>
-      <h2>Answer a few basic questions. </h2>
-      <h2>Then find the friend with the greatest compatibility!</h2>
-      <br>
+      
+      <form>
+          <div class="form-row align-items-center">
+            <div class="form-inline">
+              <input type="text" class="form-control" id="asfFormInput" placeholder="ASF File...">
+              <button type="button" class="btn btn-primary mb-2" onclick="selectFile()">Load</button>
+              
+              <input type="file" id="custom-file-input" style="display: none" onchange="fileSelected(this, "asfFormInput")" ></input>
+            </div>
 
-      <div>
-        <a href="/survey"><button type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-list-alt"></span> Go to Survey</h4></button></a>
-      </div>
+            <div class="form-inline">
+              <input type="text" class="form-control" id="asfHeaderFileFormInput" placeholder="ASF Header File...">
+              <button type="file" class="btn btn-primary mb-2">Load</button>
+            </div>
 
-    </div>
+            <div class="form-inline">
+              <input type="text" class="form-control" id="arrestmentLogFileFormInput" placeholder="Arrestment Log File...">
+              <button type="file" class="btn btn-primary mb-2">Load</button>
+            </div>
+
+            <div class="form-inline">
+              <input type="text" class="form-control" id="toleranceLimitFormInput" placeholder="Tolerance">
+              <button type="file" class="btn btn-primary mb-2">Load</button>
+            </div>
+
+          </div>
+        </form>
 
     <footer class="footer">
       <div class="container">
@@ -41,6 +59,19 @@
 
   </div>
 
+
+
+  <script type="text/javascript">
+    function selectFile(){
+      document.getElementById('custom-file-input').click();
+    }
+
+    function fileSelected(input, id){
+      console.log('file name: ', input)
+      document.getElementById('id').value = input.files[0].name;
+    }
+
+  </script>
 
 </body>
 
