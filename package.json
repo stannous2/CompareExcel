@@ -21,8 +21,9 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
-    "jszip": "^3.1.5",
-    "path": "^0.12.7"
+    "jszip": "file:node_modules/jszip",
+    "path": "^0.12.7",
+    "xlsx": "^0.14.1"
   },
   "engines": {
     "node": "8.11.3"
